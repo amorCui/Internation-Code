@@ -1,0 +1,81 @@
+.internationalCode{
+    display:inline-block;
+}
+
+.internationalCode .internationalCode__countryCode{
+    width: 130px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    border: rgb(194, 194, 194) solid 1px;
+    border-right: none;
+    background-color: #fff;
+    position:relative;
+}
+
+.internationalCode .internationalCode__countryCode.allow-dropdown:after{
+    position: absolute;
+    right:0;
+    content: "";
+    border-width: 6px 3px 0 3px;
+    border-style: solid;
+    border-color: #000 transparent ;
+    margin:2px;
+}
+
+.internationalCode .internationalCode__countryCode .internationalCode__countryCode__codeArea{
+    position: relative;
+    user-select:none;
+}
+
+.internationalCode .internationalCode__countryCode .internationalCode__countryCode__nameArea{
+    position: relative;
+    user-select:none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+    padding-right: 6px;
+}
+
+.internationalCode .internationalCode__countryList{
+    list-style:none;
+    position: absolute;
+    border: rgb(194, 194, 194) solid 1px;
+    /*height: 60px;*/
+    overflow-y: scroll;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start:0;
+    padding-inline-end:0;
+    z-index: 10;
+    background-color: #fff;
+    user-select:none;
+    width: 130px;
+}
+
+.internationalCode .internationalCode__countryList .internationalCode__countryList__country{
+    height:32px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.internationalCode .internationalCode__countryList .internationalCode__countryList__country:hover{
+    background-color:rgb(51, 153, 255);
+}
+
+.internationalCode .internationalCode__countryList .internationalCode__countryList__country.active{
+    background-color:rgb(0,154,231);
+}
+
+.internationalCode .internationalCode__countryList .internationalCode__countryList__country.active:hover{
+    background-color:rgb(51, 153, 255);
+}
+
+
+
+.internationalCode .internationalCode__countryList.notshow{
+    visibility:hidden;
+    /*display:none;*/
+}
+

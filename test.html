@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/InternationalCode.css"/>
+    <script src="js/InternationalCode.js"></script>
+</head>
+<body>
+    <div style="float:left">
+        <div id="test">
+            <input  type=""/>
+        </div>
+    </div>
+    <div style="float:left">
+        <div id="test2">
+            <input  type=""/>
+        </div>
+    </div>
+
+
+
+    <script>
+        var siteCode = getParamer('site');
+        var language = getParamer('locale');
+        var options;
+        //是否是香港站点(国际站点)
+        if(siteCode == 'HWC_HK'){
+            if(language == 'zh-CN'){
+                //语言
+                options ={
+                    language : 'zh-cn',
+                    default:'+86'
+                };
+            }else if(language == 'en-US'){
+                options ={
+                    language : 'en-us',
+                    default:'+852'
+                };
+            }
+            var input = document.querySelector('#test');
+            input.internationalCode(options);
+             var input2 = document.querySelector('#test2');
+             var options2 ={
+                    language : 'zh-cn',
+                    default:'+86',
+                    allowDrop:false
+                };
+            input2.internationalCode(options2);
+        }
+    </script>
+</body>
+</html>
